@@ -1,0 +1,37 @@
+p {
+  font-family: $default-font-family;
+  line-height: 2.0em;
+  font-weight: 400;
+
+}
+
+.title {
+  font-family: $primary-font-family;
+  font-weight: 700;
+  font-size: 2.0em;
+}
+
+.fa, .title-skill span {
+  vertical-align: middle;
+}
+.title-skill {
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  font-weight: 700;
+  border-top: 1px dashed rgba(0,0,0,0.1);
+  border-bottom: 1px dashed rgba(0,0,0,0.1);
+  margin: 5px 0 10px 0;
+  padding: 8px 0 5px 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.title-skill span {
+  padding-left: 15px;
+  font-size: 16px;
+  text-transform: uppercase;
+}

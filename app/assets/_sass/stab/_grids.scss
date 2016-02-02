@@ -1,0 +1,70 @@
+.s-cont {
+  @include margin(auto);
+  @include padding(15px);
+  width: $container-l-max;
+
+  @include clear-fix;
+}
+
+.s-row {
+  @include margin(-15px);
+
+  @include clear-fix;
+}
+
+@media (max-width: $screen-m-max) {
+  .s-cont {
+    width: $container-m-max;
+  }
+}
+
+@media (max-width: $screen-s-max) {
+  .s-cont {
+    width: $container-s-max;
+  }
+}
+
+@media (max-width: $screen-x-max) {
+  .s-cont {
+    width: $container-x-max;
+  }
+}
+
+%s-collumn-list-style {
+  position: relative;
+  float: left;
+  @include padding(15px);
+  min-height: 1px;
+}
+
+@include s-collumn-list;
+
+@for $i from 1 through $columns {
+  .s-l-#{$i} {
+    width: ((100 / $columns) * $i) * 1%;
+  }
+}
+
+@media (max-width: $screen-m-max) {
+  @for $i from 1 through $columns {
+    .s-m-#{$i} {
+      width: ((100 / $columns) * $i) * 1%;
+    }
+  }
+}
+
+@media (max-width: $screen-s-max) {
+  @for $i from 1 through $columns {
+    .s-s-#{$i} {
+      width: ((100 / $columns) * $i) * 1%;
+    }
+  }
+}
+
+@media (max-width: $screen-x-max) {
+  @for $i from 1 through $columns {
+    .s-x-#{$i} {
+      width: ((100 / $columns) * $i) * 1%;
+    }
+  }
+}
