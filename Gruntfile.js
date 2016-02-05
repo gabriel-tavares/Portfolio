@@ -58,7 +58,7 @@ module.exports = function (grunt) {
         imagemin: {                          // Task,
             dynamic: {                         // Another target
                 options: {                       // Target options
-                    optimizationLevel: 3,
+                    optimizationLevel: 1,
                     svgoPlugins: [{removeViewBox: false}],
                     use: [mozjpeg()]
                 },
@@ -81,7 +81,7 @@ module.exports = function (grunt) {
                 },
                 options: {
                     watchTask: true,
-                    reloadDelay: 2000,
+                    reloadDelay: 500,
                     server: {
                         baseDir: "./dist/"
                     }

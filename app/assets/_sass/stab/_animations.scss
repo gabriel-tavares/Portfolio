@@ -132,44 +132,48 @@
   color:#00407F;
 }
 
+
+
 ///////////////////////////////////
 
 .ca-menu{
   padding: 0;
   margin: 20px auto;
-  width: 500px;
-}
-.ca-menu li{
-  width: 500px;
-  height: 100px;
-  overflow: hidden;
-  display: block;
-  background: #fff;
-  -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-  -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-  box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-  margin-bottom: 4px;
-  border-left: 10px solid #000;
-  -webkit-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  -ms-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-}
-.ca-menu li:last-child{
-  margin-bottom: 0px;
-}
-.ca-menu li a{
-  text-align: left;
-  display: block;
   width: 100%;
-  height: 100%;
-  color: #333;
-  position:relative;
+
+  & li {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    display: block;
+    background: #fff;
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    margin-bottom: 4px;
+    //border-left: 10px solid #000;
+    -webkit-transition: all 300s ease-in-out;
+    -moz-transition: all 300s ease-in-out;
+    -o-transition: all 300s ease-in-out;
+    -ms-transition: all 300s ease-in-out;
+    transition: all 300s ease-in-out;
+
+    &:last-child{
+      margin-bottom: 0px;
+    }
+
+    & a {
+      text-align: left;
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: #333;
+      position:relative;
+    }
+  }
 }
+
 .ca-icon{
-  font-family: 'WebSymbolsRegular', cursive;
-  font-size: 20px;
   text-shadow: 0px 0px 1px #333;
   line-height: 90px;
   position: absolute;
@@ -190,7 +194,8 @@
   top: 20px;
 }
 .ca-main{
-  font-size: 30px;
+  font-family: 'Inconsolata';
+  font-size: 20px;
   -webkit-transition: all 300ms linear;
   -moz-transition: all 300ms linear;
   -o-transition: all 300ms linear;
@@ -198,6 +203,7 @@
   transition: all 300ms linear;
 }
 .ca-sub{
+  font-family: 'Inconsolata';
   font-size: 14px;
   color: #666;
   -webkit-transition: all 300ms linear;
@@ -208,18 +214,76 @@
 }
 .ca-menu li:hover{
   border-color: #fff004;
-  background: #000;
+
 }
 .ca-menu li:hover .ca-icon{
-  color: #fff004;
-  text-shadow: 0px 0px 1px #fff004;
+  color: #e67e22;
+  //text-shadow: 0px 0px 1px #fff004;
   font-size: 50px;
+  opacity: 0.5;
 }
 .ca-menu li:hover .ca-main{
   color: #fff004;
   font-size: 14px;
+
 }
 .ca-menu li:hover .ca-sub{
   color: #fff;
   font-size: 30px;
+}
+
+@keyframes psg {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.psg-effects:hover {
+  -webkit-animation-name: psg;
+  animation-name: psg;
+  animation-duration: 1s;
+  background: url("../../img/psg.jpg") no-repeat;
+}
+
+
+
+/* Icon - Github / Linkedin */
+.hrv-icon-fade {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;  position: relative;
+  padding-right: 10px;
+
+  &:before {
+    //content: "\f00c";
+    //position: absolute;
+    right: 1em;
+    padding: 0 1px;
+    font-family: FontAwesome;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-property: color;
+    transition-property: color;
+  }
+
+  &:visited,
+  &:hover,
+  &:focus,
+  &:active {
+
+    &:before {
+      color: #0F9E5E;
+    }
+  }
 }
