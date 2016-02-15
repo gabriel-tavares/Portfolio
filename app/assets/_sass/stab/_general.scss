@@ -5,6 +5,10 @@ section {
   min-height: 800px;
 }
 
+.projetos > .s-row {
+  margin-bottom: 30px;
+}
+
 .home {
   background: url("../../img/html.jpg") no-repeat center center;
   -webkit-background-size: cover;
@@ -15,4 +19,14 @@ section {
 }
 .sobre{
   background-color: #EDEDED;
+}
+
+.desenvolvimento {
+  color:$desenvolvimento-color;
+}
+.design {
+  color:$design-color;
+}
+.ferramenta{
+  color:$ferramenta-color;
 }

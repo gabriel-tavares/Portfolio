@@ -123,11 +123,13 @@
                     <h2 class="title">Projetos</h2>
                 </div>
             </div>
+
+            <!-- PSG -->
             <div class="s-row">
                 <div class="s-l-4 s-x-12">
                     <ul class="ca-menu">
                         <li>
-                            <a id="teste" href="#" class="psg-effects">
+                            <a id="psg" href="#" class="psg-effects">
                                 <span class="ca-icon"><i class="fa fa-code fa-3x"></i></span>
                                 <div class="ca-content">
                                     <h2 class="ca-main">PSG</h2>
@@ -138,19 +140,30 @@
                     </ul>
                 </div>
                 <div class="s-l-8 s-x-12">
-                    <br>
-                    <p>Fui responsável pelo design de interação, visual do novo PSG (Senac) e navegação do usuário pelo sistema, passando por todas as etapas: fluxograma, wireframe, criação do layout e protótipo. Fiz toda a codificação em HTML/CSS/JS e apoio a equipe de desenvolvimento .NET durante todo o processo.</p>
+                    <div class="s-row">
+                        <div class="s-l-7 s-x-12">
+                            <h2 class="sub-title">O que eu fiz?</h2>
+                            <p>Fui responsável pelo design de interação, visual do novo PSG (Senac) e navegação do usuário pelo sistema, passando por todas as etapas: fluxograma, wireframe, criação do layout e protótipo.</p> 
+                        </div>
+                        <div class="s-l-5 s-x-12">
+                            <h2 class="sub-title">Metodologia/Tecnologia</h2>
+                            <ul>
+                                <li><i class="fa fa-code desenvolvimento"></i> HTML 5 / CSS / Sass </li>
+                                <li><i class="fa fa-paint-brush design"></i> Wireframe / UI/UX </li>
+                                <li><i class="fa fa-wrench ferramenta"></i> Axure / Photoshop</li>
+                            </ul>
+                            <a href="http://psg.rj.senac.br/Paginas/Principal.aspx" class="btn-link externo"> Acesse o site</a>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- Programa Transformar -->
             <div class="s-row">
-                <div class="s-l-8 s-x-12">
-                    <br>
-                    <p>Fui responsável pelo design de interação, visual do novo PSG (Senac) e navegação do usuário pelo sistema, passando por todas as etapas: fluxograma, wireframe, criação do layout e protótipo. Fiz toda a codificação em HTML/CSS/JS e apoio a equipe de desenvolvimento .NET durante todo o processo.</p>
-                </div>
                 <div class="s-l-4 s-x-12">
                     <ul class="ca-menu">
                         <li>
-                            <a id="teste" href="#" class="psg-effects">
+                            <a id="psg" href="#" class="psg-effects">
                                 <span class="ca-icon"><i class="fa fa-code fa-3x"></i></span>
                                 <div class="ca-content">
                                     <h2 class="ca-main">PSG</h2>
@@ -159,6 +172,23 @@
                             </a>
                         </li>
                     </ul>
+                </div>
+                <div class="s-l-8 s-x-12">
+                    <div class="s-row">
+                        <div class="s-l-7 s-x-12">
+                            <h2 class="sub-title">O que eu fiz?</h2>
+                            <p>Fui responsável pelo design de interação, visual do novo PSG (Senac) e navegação do usuário pelo sistema, passando por todas as etapas: fluxograma, wireframe, criação do layout e protótipo.</p> 
+                        </div>
+                        <div class="s-l-5 s-x-12">
+                            <h2 class="sub-title">Metodologia/Tecnologia</h2>
+                            <ul>
+                                <li><i class="fa fa-code desenvolvimento"></i> HTML 5 / CSS / Sass </li>
+                                <li><i class="fa fa-paint-brush design"></i> Wireframe / UI/UX </li>
+                                <li><i class="fa fa-wrench ferramenta"></i> Axure / Photoshop</li>
+                            </ul>
+                            <a href="http://psg.rj.senac.br/Paginas/Principal.aspx" class="btn-link externo"> Acesse o site</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -172,39 +202,39 @@
         </div>
     </section>
     <script>
-        $(function () {
-            $("#skill").click(function () {
+    $(function () {
+        $("#skill").click(function () {
+            jQuery('.skillbar').each(function(){
+                jQuery(this).find('.skillbar-bar').animate({
+                    width:""},1);
+            });
+            setTimeout(function () {
                 jQuery('.skillbar').each(function(){
                     jQuery(this).find('.skillbar-bar').animate({
-                        width:""},1);
+                        width:jQuery(this).attr('data-percent')
+                    },1500);
                 });
-                setTimeout(function () {
-                    jQuery('.skillbar').each(function(){
-                        jQuery(this).find('.skillbar-bar').animate({
-                            width:jQuery(this).attr('data-percent')
-                        },1500);
-                    });
-                }, 1);
-            });
+            }, 1);
         });
+    });
 
 
 
-        $( document ).ready(function() {
+    $( document ).ready(function() {
 
-            /* Basic Gallery */
-            $( '.swipebox' ).swipebox();
+        /* Basic Gallery */
+            //$( '.swipebox' ).swipebox();
 
             /* Video */
-            $( '.swipebox-video' ).swipebox();
+            //$( '.swipebox-video' ).swipebox();
 
             /* Dynamic Gallery */
-            $( '#teste' ).click( function( e ) {
+            $( '#psg' ).click( function( e ) {
                 e.preventDefault();
                 $.swipebox( [
+                    { href : 'img/psg.png', title : 'PSG - Senac' },
                     { href : 'img/psg01.jpg', title : 'PSG - Senac (Wireframe)' },
                     { href : 'img/psg02.jpg', title : 'PSG - Senac (Site)' },
-                    { href : 'img/psg03.jpg', title : 'PSG - Senac' },
                     ] );
             } );
 
