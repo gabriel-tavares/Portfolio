@@ -2,7 +2,6 @@
 <html lang="pt-br">
 <head>
 
-
     <title>Gabriel Tavares - Desenvolvedor Front End</title>
 
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
@@ -173,42 +172,43 @@
         </div>
     </section>
     <script>
-    $(function () {
-        $("#skill").click(function () {
-            jQuery('.skillbar').each(function(){
-                jQuery(this).find('.skillbar-bar').animate({
-                    width:""},1);
-            });
-            setTimeout(function () {
+        $(function () {
+            $("#skill").click(function () {
                 jQuery('.skillbar').each(function(){
                     jQuery(this).find('.skillbar-bar').animate({
-                        width:jQuery(this).attr('data-percent')
-                    },1500);
+                        width:""},1);
                 });
-            }, 1);
+                setTimeout(function () {
+                    jQuery('.skillbar').each(function(){
+                        jQuery(this).find('.skillbar-bar').animate({
+                            width:jQuery(this).attr('data-percent')
+                        },1500);
+                    });
+                }, 1);
+            });
         });
-    });
 
 
 
-    $( document ).ready(function() {
+        $( document ).ready(function() {
 
-        /* Basic Gallery */
-        $( '.swipebox' ).swipebox();
+            /* Basic Gallery */
+            $( '.swipebox' ).swipebox();
 
-        /* Video */
-        $( '.swipebox-video' ).swipebox();
+            /* Video */
+            $( '.swipebox-video' ).swipebox();
 
-        /* Dynamic Gallery */
-        $( '#teste' ).click( function( e ) {
-            e.preventDefault();
-            $.swipebox( [
-                { href : 'http://swipebox.csag.co/mages/image-1.jpg', title : 'My Caption' },
-                { href : 'http://swipebox.csag.co/images/image-2.jpg', title : 'My Second Caption' }
-                ] );
-        } );
+            /* Dynamic Gallery */
+            $( '#teste' ).click( function( e ) {
+                e.preventDefault();
+                $.swipebox( [
+                    { href : 'img/psg01.jpg', title : 'PSG - Senac (Wireframe)' },
+                    { href : 'img/psg02.jpg', title : 'PSG - Senac (Site)' },
+                    { href : 'img/psg03.jpg', title : 'PSG - Senac' },
+                    ] );
+            } );
 
-    });
+        });
 
     </script>
     <script src="assets/js/fastclick.js"></script>
