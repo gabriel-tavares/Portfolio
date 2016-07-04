@@ -1,250 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-br" >
-<head>
+<html lang="pt-br" ng-app="alurapic">
+	<head>
+		<base href="/">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Alurapic</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="css/efeitos.css">
+		<script src="js/lib/angular.min.js"></script>
+        <script src="js/lib/angular-animate.min.js"></script>
+        <script src="js/lib/angular-route.min.js"></script>
+        <script src="js/lib/angular-resource.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/controllers/fotos-controller.js"></script>
+        <script src="js/controllers/foto-controller.js"></script>
+		<script src="js/controllers/grupos-controller.js"></script>
+		<script src="js/directives/minhas-diretivas.js"></script>
+        <script src="js/services/meus-servicos.js"></script>
+	</head>
+	<body>
+		<div class="container">
 
-    <title>Gabriel Tavares - Desenvolvedor Front End</title>
+			<ng-view></ng-view>
 
-    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
-
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    <meta name="robots" content="index, follow">
-    <meta content="" name="description">
-    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="assets/css/stab.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="assets/js/responsive-nav.js"></script>
-    <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <link rel="stylesheet" href="css/ie.css">
-    <![endif]-->
-
-</head>
-<body>
-    <header class="effect">
-        <a href="#home" class="logo" data-scroll>Gabriel Tavares</a>
-        <nav class="nav-collapse">
-            <ul>
-                <li class="menu-item"><a href="#home" data-scroll>Home</a></li>
-                <li class="menu-item"><a href="#sobre" data-scroll id="skill">Sobre Mim</a></li>
-                <li class="menu-item"><a href="#projetos" data-scroll>Projetos</a></li>
-                <li class="menu-item"><a href="#contato" data-scroll>Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div id="nav" class="nav-collapse">
-        <ul>
-            <li class="active"><a href="http://responsive-nav.com">Home</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#instructions">Usage Instructions</a></li>
-            <li><a href="https://github.com/viljamis/responsive-nav.js" rel="external">View on GitHub</a></li>
-        </ul>
-    </div>
-    <section id="home" class="home">
-        <p>Página Principal</p>
-    </section>
-
-    <section id="sobre" class="sobre">
-        <div class="s-cont">
-            <div class="s-row">
-                <div class="s-l-3 s-x-12">
-                    <h2 class="title">Sobre mim...</h2>
-                    <a target="_blank" title="Linkedin" href="https://github.com/gabriel-tavares/"><i class="hrv-icon-fade fa fa-github-square fa-3x"></i></a>
-                    <a target="_blank" title="Linkedin" href="https://br.linkedin.com/in/gtavares"><i class="hrv-icon-fade fa fa-linkedin-square fa-3x"></i></a>
-                </div>
-                <div class="s-l-9 s-x-12">
-                    <p>... meu nome é Gabriel Tavares, moro no Rio de Janeiro - RJ, trabalho com desenvolvimento front end há 6 anos, tendo domínio em todas as etapas client-side (wireframe, layout e codificação). Sou formado em Design Gráfico e estou terminando Análise e Desenvolvimento de Sistemas. Atualmente trabalho na 3CON consultoria e sistemas desde 2013, participando de projetos para OI, Globo, Senac Rio. </p>
-                </div>
-            </div>
-            <div class="s-row">
-                <div class="s-l-4 s-x-12 desenvolvimento">
-                    <h1 class="title-skill"> <i class="fa fa-code fa-2x desenvolvimento-icon"></i> <span>Desenvolvimento Front-end</span></h1>
-                    <div class="skillbar clearfix " data-percent="100%">
-                        <div class="skillbar-title"><span>HTML5</span></div>
-                        <div class="skillbar-bar"></div>
-                    </div>
-                    <div class="skillbar clearfix " data-percent="100%">
-                        <div class="skillbar-title"><span>CSS</span></div>
-                        <div class="skillbar-bar"></div>
-                    </div>
-                    <div class="skillbar clearfix " data-percent="60%">
-                        <div class="skillbar-title"><span>Javascript</span></div>
-                        <div class="skillbar-bar"></div>
-                    </div>
-                    <div class="skillbar clearfix " data-percent="60%">
-                        <div class="skillbar-title"><span>JQuery</span></div>
-                        <div class="skillbar-bar"></div>
-                    </div>
-                    <div class="skillbar clearfix " data-percent="60%">
-                        <div class="skillbar-title"><span>Grunt</span></div>
-                        <div class="skillbar-bar"></div>
-                    </div>
-                    <div class="skillbar clearfix " data-percent="70%">
-                        <div class="skillbar-title"><span>SASS</span></div>
-                        <div class="skillbar-bar"></div>
-                    </div>
-                </div>
-                <div class="s-l-4 s-x-12 design">
-                    <h1 class="title-skill"> <i class="fa fa-paint-brush fa-2x design-icon"></i> <span>Design</span></h1>
-                    <div class="skillbar clearfix " data-percent="60%">
-                        <div class="skillbar-title"><span>UI/UX</span></div>
-                        <div class="skillbar-bar"></div>
-                    </div>
-                    <div class="skillbar clearfix " data-percent="100%">
-                        <div class="skillbar-title"><span>Wireframe</span></div>
-                        <div class="skillbar-bar"></div>
-                    </div>
-                </div>
-                <div class="s-l-4 s-x-12 ferramenta">
-                    <h1 class="title-skill"> <i class="fa fa-wrench fa-2x ferramenta-icon"></i> <span>Ferramentas e Técnicas</span></h1>
-                    <div class="skillbar clearfix " data-percent="80%">
-                        <div class="skillbar-title"><span>Axure</span></div>
-                        <div class="skillbar-bar"></div>
-                    </div>
-                    <div class="skillbar clearfix " data-percent="80%">
-                        <div class="skillbar-title"><span>Photoshop</span></div>
-                        <div class="skillbar-bar"></div>
-                    </div>
-                    <div class="skillbar clearfix " data-percent="50%">
-                        <div class="skillbar-title"><span>GIT/SVN</span></div>
-                        <div class="skillbar-bar"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projetos">
-        <div class="s-cont">
-            <div class="s-row">
-                <div class="s-l-3 s-x-12">
-                    <h2 class="title">Projetos</h2>
-                </div>
-            </div>
-
-            <!-- PSG -->
-            <div class="s-row">
-                <div class="s-l-4 s-x-12">
-                    <ul class="ca-menu">
-                        <li>
-                            <a id="psg" href="#" class="psg-effects">
-                                <span class="ca-icon"><i class="fa fa-code fa-3x"></i></span>
-                                <div class="ca-content">
-                                    <h2 class="ca-main">PSG</h2>
-                                    <h3 class="ca-sub">Senac Rio</h3>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="s-l-8 s-x-12">
-                    <div class="s-row">
-                        <div class="s-l-7 s-x-12">
-                            <h2 class="sub-title">O que eu fiz?</h2>
-                            <p>Fui responsável pelo design de interação, visual do novo PSG (Senac) e navegação do usuário pelo sistema, passando por todas as etapas: fluxograma, wireframe, criação do layout e protótipo.</p> 
-                        </div>
-                        <div class="s-l-5 s-x-12">
-                            <h2 class="sub-title">Metodologia/Tecnologia</h2>
-                            <ul>
-                                <li><i class="fa fa-code desenvolvimento"></i> HTML 5 / CSS / Sass </li>
-                                <li><i class="fa fa-paint-brush design"></i> Wireframe / UI/UX </li>
-                                <li><i class="fa fa-wrench ferramenta"></i> Axure / Photoshop</li>
-                            </ul>
-                            <a href="http://psg.rj.senac.br/Paginas/Principal.aspx" class="btn-link externo"> Acesse o site</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Programa Transformar -->
-            <div class="s-row">
-                <div class="s-l-4 s-x-12">
-                    <ul class="ca-menu">
-                        <li>
-                            <a id="psg" href="#" class="psg-effects">
-                                <span class="ca-icon"><i class="fa fa-code fa-3x"></i></span>
-                                <div class="ca-content">
-                                    <h2 class="ca-main">PSG</h2>
-                                    <h3 class="ca-sub">Senac Rio</h3>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="s-l-8 s-x-12">
-                    <div class="s-row">
-                        <div class="s-l-7 s-x-12">
-                            <h2 class="sub-title">O que eu fiz?</h2>
-                            <p>Fui responsável pelo design de interação, visual do novo PSG (Senac) e navegação do usuário pelo sistema, passando por todas as etapas: fluxograma, wireframe, criação do layout e protótipo.</p> 
-                        </div>
-                        <div class="s-l-5 s-x-12">
-                            <h2 class="sub-title">Metodologia/Tecnologia</h2>
-                            <ul>
-                                <li><i class="fa fa-code desenvolvimento"></i> HTML 5 / CSS / Sass </li>
-                                <li><i class="fa fa-paint-brush design"></i> Wireframe / UI/UX </li>
-                                <li><i class="fa fa-wrench ferramenta"></i> Axure / Photoshop</li>
-                            </ul>
-                            <a href="http://psg.rj.senac.br/Paginas/Principal.aspx" class="btn-link externo"> Acesse o site</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contato">
-        <div class="s-row">
-            <div class="s-l-3 s-x-12">
-                <h2 class="title">Contato</h2>
-            </div>
-        </div>
-    </section>
-    <script>
-    $(function () {
-        $("#skill").click(function () {
-            jQuery('.skillbar').each(function(){
-                jQuery(this).find('.skillbar-bar').animate({
-                    width:""},1);
-            });
-            setTimeout(function () {
-                jQuery('.skillbar').each(function(){
-                    jQuery(this).find('.skillbar-bar').animate({
-                        width:jQuery(this).attr('data-percent')
-                    },1500);
-                });
-            }, 1);
-        });
-    });
-
-
-
-    $( document ).ready(function() {
-
-        /* Basic Gallery */
-            //$( '.swipebox' ).swipebox();
-
-            /* Video */
-            //$( '.swipebox-video' ).swipebox();
-
-            /* Dynamic Gallery */
-            $( '#psg' ).click( function( e ) {
-                e.preventDefault();
-                $.swipebox( [
-                    { href : 'img/psg.png', title : 'PSG - Senac' },
-                    { href : 'img/psg01.jpg', title : 'PSG - Senac (Wireframe)' },
-                    { href : 'img/psg02.jpg', title : 'PSG - Senac (Site)' },
-                    ] );
-            } );
-
-        });
-
-    </script>
-    <script src="assets/js/fastclick.js"></script>
-    <script src="assets/js/scroll.js"></script>
-    <script src="assets/js/fixed-responsive-nav.js"></script>
-    <script src="assets/js/ios-orientationchange-fix.js"></script>
-    <script src="assets/js/jquery.swipebox.js"></script>
-</boy>
+		</div> <!-- fim container -->        
+	</body>
 </html>

@@ -1,0 +1,85 @@
+.container {
+  @include margin(auto);
+  @include padding(15px);
+  width: $container-l-max;
+  @include clear-fix;
+
+  &-fluid {
+  @include margin(auto);
+  @include padding(15px);
+  }
+}
+
+.row {
+  @include margin(-15px);
+  @include clear-fix;
+}
+
+@media (max-width: $screen-m-max) {
+  .container {
+    width: $container-m-max;
+  }
+}
+
+@media (max-width: $screen-s-max) {
+  .container {
+    width: $container-s-max;
+  }
+}
+
+@media (max-width: $screen-x-max) {
+  .container {
+    width: $container-x-max;
+  }
+}
+
+%collumn-list-style {
+  position: relative;
+  float: left;
+  @include padding(15px);
+  min-height: 1px;
+}
+
+@include collumn-list;
+
+@for $i from 1 through $columns {
+  .l-#{$i} {
+    width: ((100 / $columns) * $i) * 1%;
+  }
+  .l-offset-#{$i} {
+    margin-left: ((100 / $columns) * $i) * 1%;
+  }
+}
+
+@media (max-width: $screen-m-max) {
+  @for $i from 1 through $columns {
+    .m-#{$i} {
+      width: ((100 / $columns) * $i) * 1%;
+    }
+    .m-offset-#{$i} {
+    margin-left: ((100 / $columns) * $i) * 1%;
+  }
+  }
+}
+
+@media (max-width: $screen-s-max) {
+  @for $i from 1 through $columns {
+    .s-#{$i} {
+      width: ((100 / $columns) * $i) * 1%;
+    }
+    .s-offset-#{$i} {
+    margin-left: ((100 / $columns) * $i) * 1%;
+  }
+  }
+}
+
+@media (max-width: $screen-x-max) {
+  @for $i from 1 through $columns {
+    .x-#{$i} {
+      width: ((100 / $columns) * $i) * 1%;
+    }
+    .x-offset-#{$i} {
+    margin-left: ((100 / $columns) * $i) * 1%;
+  }
+  }
+}

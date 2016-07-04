@@ -1,0 +1,56 @@
+@mixin clear-fix {
+  &:before, &:after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin margin($value) {
+  margin-right: $value;
+  margin-left: $value;
+}
+
+@mixin padding($value) {
+  padding-right: $value;
+  padding-left: $value;
+}
+
+@mixin img-r {
+  .img-r {
+    display: block;
+    @include margin(auto);
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@mixin text-align($position) {
+  .text-#{$position} {
+    text-align: $position;
+  }
+
+  @media (max-width: $screen-m-max) {
+    .text-m-#{$position} {
+      text-align: $position;
+    }
+  }
+
+  @media (max-width: $screen-s-max) {
+    .text-s-#{$position} {
+      text-align: $position;
+    }
+  }
+
+  @media (max-width: $screen-x-max) {
+    .text-x-#{$position} {
+      text-align: $position;
+    }
+  }
+}
+
+@mixin collumn-list {
+  @for $i from 1 through $columns {
+    .l-#{$i}, .m-#{$i}, .s-#{$i}, .x-#{$i} { @extend %collumn-list-style; }
+  }
+}
